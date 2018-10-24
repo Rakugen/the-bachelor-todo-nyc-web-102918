@@ -59,18 +59,16 @@ def get_average_age_for_season(data, season)
   total = 0.00
   count = 0.00
   data.each do |num_season, array_of_contestants| #"season 30", "season 29" ..
-    array_of_contestants.each do |data| #{:name => "xyz"}, {}, {} ..
-      data.each do |key, value|
-        if key == "age"
-          count += 1
-          total += data["age"].to_f
+    if num_season == season
+      array_of_contestants.each do |data| #{:name => "xyz"}, {}, {} ..
+        data.each do |key, value|
+          if key == "age"
+            count += 1
+            total += data["age"].to_f
+          end
         end
       end
     end
   end
-  puts total
-  puts count
-  puts total/count
-  puts (total/count).round
   (total/count).round
 end
