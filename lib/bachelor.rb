@@ -1,9 +1,9 @@
 require "pry"
 def get_first_name_of_season_winner(data, season)
   name = ""
-  data.each do |num_season, array_of_contestants|
+  data.each do |num_season, array_of_contestants| #"season 30", "season 29" ..
     if num_season == season
-      array_of_contestants.each do |contestant, data|
+      array_of_contestants.each do |data| #{:name => "xyz"}, {}, {} ..
         data.each do |key, value|
           if key == "status" && value == "Winner"
             name = data[season][contestant]["name"]
