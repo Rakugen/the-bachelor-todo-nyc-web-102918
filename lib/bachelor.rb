@@ -6,7 +6,7 @@ def get_first_name_of_season_winner(data, season)
       array_of_contestants.each do |data| #{:name => "xyz"}, {}, {} ..
         data.each do |key, value|
           if key == "status" && value == "Winner"
-            name = data[season][contestant]["name"]
+            name = data["name"]
             name_array = name.split(" ")
             return name_array[0]
           end
