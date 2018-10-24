@@ -32,12 +32,10 @@ end
 def count_contestants_by_hometown(data, hometown)
   count = 0
   data.each do |num_season, array_of_contestants| #"season 30", "season 29" ..
-    if num_season == season
-      array_of_contestants.each do |data| #{:name => "xyz"}, {}, {} ..
-        data.each do |key, value|
-          if key == "hometown" && value == hometown
-            count += 1
-          end
+    array_of_contestants.each do |data| #{:name => "xyz"}, {}, {} ..
+      data.each do |key, value|
+        if key == "hometown" && value == hometown
+          count += 1
         end
       end
     end
