@@ -56,7 +56,7 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  total = 0.0
+  total = 0.00
   count = 0
   data.each do |num_season, array_of_contestants| #"season 30", "season 29" ..
     array_of_contestants.each do |data| #{:name => "xyz"}, {}, {} ..
