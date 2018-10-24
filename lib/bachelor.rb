@@ -70,5 +70,7 @@ def get_average_age_for_season(data, season)
   end
   puts total
   puts count
+  puts total/count
+  puts (total/count).round
   (total/count).round
 end
